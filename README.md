@@ -5,6 +5,7 @@
 
 <img src="https://github.com/wzx54321/LockDemo/blob/master/imgs/take1.gif" width="30%" height="30%"/>  
 <img src="https://github.com/wzx54321/LockDemo/blob/master/imgs/take2.gif" width="30%" height="30%"/>  
-<img src="https://github.com/wzx54321/LockDemo/blob/master/imgs/take0.gif" width="30%" height="30%"/>
-<img src="https://github.com/wzx54321/LockDemo/blob/master/imgs/take.gif" width="30%" height="30%"/>
- 
+ <center class="half">
+ <img src="https://github.com/wzx54321/LockDemo/blob/master/imgs/take0.gif" width="30%" height="30%"/>
+ <img src="https://github.com/wzx54321/LockDemo/blob/master/imgs/take.gif" width="30%" height="30%"/>
+</center>
