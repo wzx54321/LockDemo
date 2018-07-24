@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/bg_finger_change_dialog"
+              android:layout_gravity="center"
+              android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/text_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="30dp"
+        android:textColor="#333333"
+        android:textSize="12sp"
+        tools:text="weonfksnfksnfksnkfkkkkkkkkkkkkkkkssssssssssssssssskkkkkkkkkkk"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/text_root"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/darker_gray"/>
+    <TextView
+        android:id="@+id/btn_i_see"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/line"
+        android:gravity="center"
+        android:text="知道了"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="16sp"/>
+
+
+</LinearLayout>

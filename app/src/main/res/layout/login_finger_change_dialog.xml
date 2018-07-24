@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/login_shape_bg_finger_change_dialog"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+              android:paddingBottom="30dp"
+              android:paddingTop="30dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_dialog_title_finger_change"
+        android:textColor="@color/common_text_color"
+        android:textSize="16sp"/>
+
+
+
+    <TextView
+        android:id="@+id/open_fingerprint"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/btn_blue_normal"
+        android:gravity="center"
+        android:text="@string/login_btn_text_fingerprint_psw"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"/>
+
+
+</LinearLayout>

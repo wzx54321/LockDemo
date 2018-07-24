@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:id="@+id/root_main"
+    android:layout_width="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layout_"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <Button
+            android:id="@+id/gesture_password"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_blue_normal"
+            android:text="手势密码"
+            android:textColor="@android:color/white"/>
+
+
+        <Button
+            android:id="@+id/fingerprint_password"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/btn_blue_normal"
+            android:text="开启指纹密码"
+            android:textColor="@android:color/white"/>
+
+
+        <Button
+            android:id="@+id/ocr_auth"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/btn_blue_normal"
+            android:text="身份证识别"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_content_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>
+
+

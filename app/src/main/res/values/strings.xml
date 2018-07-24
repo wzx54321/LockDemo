@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">lock demo</string>
+
+    <string name="login_btn_text_fingerprint_psw">设置录纹密码</string>
+    <string name="login_dialog_title_finger_change">设置开启或录入指纹登录</string>
+
+</resources>

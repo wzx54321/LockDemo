@@ -1,0 +1,2 @@
+include ':app', ':gesturepswlib', ':aliocrlib',
+        ':fingerprintlib'
