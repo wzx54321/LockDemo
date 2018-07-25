@@ -47,7 +47,7 @@ public class FingerprintPswMainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onAuthenticateFailed(int helpId) {
+            public void onAuthenticateFailed(int helpId,String msg) {
                 Toast.makeText(getApplicationContext(),"指纹识别失败，请重试！",Toast.LENGTH_LONG).show();
             }
 

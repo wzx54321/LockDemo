@@ -34,7 +34,7 @@ public class FingerprintCore {
     private int mFailedTimes = 0;
     private boolean isSupport;
     private Handler mHandler = new Handler(Looper.getMainLooper());
-
+    public boolean isFirst = true;
 
 
     /**
@@ -45,7 +45,7 @@ public class FingerprintCore {
         void onAuthenticateSuccess();
 
         /** 指纹识别失败 */
-        void onAuthenticateFailed(int helpId);
+        void onAuthenticateFailed(int helpId,String errString);
 
         /** 指纹识别发生错误-不可短暂恢复 */
         void onAuthenticateError(int errMsgId);
@@ -139,7 +139,7 @@ public class FingerprintCore {
     private void notifyAuthenticationFailed(int msgId, String errString) {
 
         if (null != mFpResultListener && null != mFpResultListener.get()) {
-            mFpResultListener.get().onAuthenticateFailed(msgId);
+            mFpResultListener.get().onAuthenticateFailed(msgId,errString);
         }
     }
 
@@ -197,10 +197,19 @@ public class FingerprintCore {
 
             return;
         }*/
-
+        if (msgId == 1001 && "等待手指按下".equals(helpString)) {
+            return;
+        }
+        if (msgId == 1002 && "手指按下".equals(helpString)) {
+            return;
+        }
+        if (msgId == 1003 && "手指抬起".equals(helpString)) {
+            return;
+        }
         cancelAuthenticate();
         mHandler.removeCallbacks(mFailedRetryRunnable);
         mHandler.postDelayed(mFailedRetryRunnable, 300); // 每次重试间隔一会儿再启动
+        isFirst=false;
     }
 
 

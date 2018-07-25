@@ -110,31 +110,18 @@ public class FingerprintUtil {
                 }
 
                 @Override
-                public void onAuthenticateFailed(int helpId) {
+                public void onAuthenticateFailed(int helpId,String msg) {
 
 
-                 /*   if (retryCount < 1) {
-                        FingerprintCore.getInstance().cancelAuthenticate();
-
-                        retryCount = 4;
-                        dialog.dismiss();
+                    if (helpId == 1001 && "等待手指按下".equals(msg)) {
                         return;
                     }
-                    textRetry.setText(String.format(FingerContext.getContext().getString(R.string.error_retry_count_format), retryCount));
-                    showLog(FingerContext.getContext().getString(R.string.log_info_failed));
-
-                    textContent.setVisibility(View.GONE);
-                    textRetry.setVisibility(View.VISIBLE);
-                    dialog.show();
-
-                    iconFinger.clearAnimation();
-                    Animation anim = AnimationUtils.loadAnimation(FingerContext.getContext(), R.anim.anim_shake);
-                    iconFinger.startAnimation(anim);
-
-                    if (listener != null) {
-                        listener.onAuthenticateFailed(helpId);
+                    if (helpId == 1002 && "手指按下".equals(msg)) {
+                        return;
                     }
-                    retryCount--;*/
+                    if (helpId == 1003 && "手指抬起".equals(msg)) {
+                        return;
+                    }
 
                     textRetry.setVisibility(View.VISIBLE);
                     iconFinger.clearAnimation();
@@ -156,14 +143,15 @@ public class FingerprintUtil {
                     if (listener != null) {
                         listener.onStartAuthenticateResult(isSuccess);
                     }
+
+                    if (isSuccess && FingerprintCore.getInstance().isFirst) {
+                        dialog.show();// 成功开启指纹硬件情况下显示
+                    }
                 }
             });
-            dialog.show();
-           /* if (FingerprintCore.getInstance().isAuthenticating()) {
-                //   Toast.makeText(FingerContext.getContext(), "指纹识别已经开启，长按指纹解锁键", Toast.LENGTH_LONG).show();
-            } else {*/
-                FingerprintCore.getInstance().startDelay();
-          //  }
+            FingerprintCore.getInstance().isFirst = true;
+            FingerprintCore.getInstance().startDelay();
+
             showLog(FingerContext.getContext().getString(R.string.log_info_start));
 
         } else if (!FingerprintCore.getInstance().isSupport()) {
