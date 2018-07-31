@@ -18,4 +18,4 @@
 </div>
 
 
-### 轻量级APP开发框架：https://github.com/wzx54321/XinFrameworkLib
+### Duang！！！轻量级APP开发框架，刚出炉：https://github.com/wzx54321/XinFrameworkLib
