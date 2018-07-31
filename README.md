@@ -16,3 +16,6 @@
    
    <img src="https://github.com/wzx54321/LockDemo/blob/master/imgs/take.gif" title="aliOCR识别" width="25%" height="25%"/>
 </div>
+
+
+### 轻量级APP开发框架：https://github.com/wzx54321/XinFrameworkLib
