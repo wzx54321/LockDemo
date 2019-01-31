@@ -19,3 +19,5 @@
 
 
 ### Duang！！！轻量级APP开发框架，刚出炉：https://github.com/wzx54321/XinFrameworkLib
+## 组件化框架demo请关注：https://github.com/wzx54321/XinframeworkSample   
+
